@@ -2,6 +2,8 @@
 # Synopsis: python3 cli.py competitors of team
 # Description: Shows a list of the teams that a given team has playd this season.
 #     The inputted team name should be of the format "School name (Team name)"
+# Usage: python3 cli.py -t "School name (Team name)"
+# Example: python3 cli.py -t "Air Force (Afterburn)"
 
 import argparse
 import json
@@ -13,7 +15,7 @@ GAMES_FILE = BASE_DIR / 'data' / 'games.json'
 
 def get_parsed_arguments():
     parser = argparse.ArgumentParser(description='Report a list of the teams a given team has played this season.')
-    parser.add_argument('-t','--team', metavar='team1', help='one team whose competitors you seek', required=True)
+    parser.add_argument('-t','--team', metavar='team1', help='one team whose competitors you seek. Example: -t Air Force (Afterburn)', required=True)
     parsed_arguments = parser.parse_args()
     return parsed_arguments
 
