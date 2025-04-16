@@ -12,6 +12,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.parent
 GAMES_FILE = BASE_DIR / 'data' / 'games.json'
+# Had to do some weird stuff because WSL doesn't like normal paths because of /mnt/
 
 def get_parsed_arguments():
     parser = argparse.ArgumentParser(description='Report a list of the teams a given team has played this season.')
