@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie API reference</title>
+</head>
+<body>
+    <pre>Ultimate Frisbee API: endpoint reference
+All responses are in JSON
+
+REQUEST: /
+RESPONSE:
+    A greeting to frisbee enthusiasts.
+
+REQUEST: /help
+RESPONSE:
+    This message
+
+REQUEST: /teams
+RESPONSE:
+	Returns list of every team that played in a USAU sanctioned tournament throughout the 2025 regular season.
+	Contains both the name of the school as well as the team's name.
+
+REQUEST: /competitors_of/&lt;team&gt;
+RESPONSE:
+	Returns a list of every team the inputted team played throughout the season.
+	The input team must be of the format school (team_name).
+	The easiest way to use this endpoint is by copying and pasting team names from the /teams endpoint.
+
+REQUEST: /point_diff/&lt;team&gt;
+RESPONSE:
+	Returns an integer value representing the net point differential for the inputted team throughout the regular season.
+	Just like the /competitors_of/&lt;team&gt; endpoint, it is easiest to copy names from the /teams endpoint to find data on a given team.
+	
+
+    </pre>
+</body>
+</html>
